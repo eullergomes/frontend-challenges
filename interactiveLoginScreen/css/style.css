@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* CONTAINER */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.content{
+    border-radius: 15px;
+    background-color: #fff;
+    width: 960px;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /*para size do ::before ser de acordo essa div*/
+}
+
+.content::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(5, 174, 135);
+    height: 100%;
+    width: 40%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* FIRST CONTENT */
+.first-content{
+    display: flex;
+}
+
+.first-column{
+    text-align: center;
+    flex: 1 0 auto; /*grown, shrink, basics */
+    z-index: 10;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primary{
+    color: #fff;
+}
+
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.description-primary{
+    color: #fff;
+}
+
+.description-second{
+    color: #7f8c8d;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    color: rgb(5, 174, 135);
+}
+
+.btn-second{
+    background-color: rgb(5, 174, 135);
+    border: 1px solid rgb(5, 174, 135);
+}
+
+.btn-second:hover{
+    background-color: #fff;
+    border: 1px solid rgb(5, 174, 135);
+    color: rgb(5, 174, 135);
+}
+
+.second-column{
+    flex: 2 0 auto; /*grown, shrink, basics */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tittle-second{
+    color: rgb(5, 174, 135);
+}
+
+.social-media{
+    margin: 1rem 0;
+}
+
+.link-social-media:hover .item-social-media{
+    background-color: #58af9b;
+    color: #fff;
+    border-color: #58af9b;
+}
+
+.list-social-media{
+    display: flex;
+    list-style-type: none;
+}
+
+.item-social-media{
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #95a5a6;
+}
+/*Não quero o seguinte atributo para o meu primeiro elemento, ou seja, nos dois vão funcionar*/
+.link-social-media:not(:first-child){
+    margin-left: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    
+}
+
+.form input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+
+.label-input{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.icon-modify{
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+/* SECOND CONTENT */
+.second-content{
+    position: absolute;
+    display: none;
+}
