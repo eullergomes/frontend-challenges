@@ -1,0 +1,84 @@
+:root{
+    --primary-color: rgb(15, 104, 139); /*uso de '--' para nome da variável*/
+    --primary-color-dark: rgb(8, 71, 96);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tabela-imc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabela-imc h2 {
+    font-size: 1.5rem;
+}
+
+.resultado-imc{
+    margin-right: 100px;
+}
+
+
+form input, form label, form button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input{
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color) ;
+}
+
+form button{
+    border: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover{
+    background-color: var(--primary-color-dark);
+}
+
+.paragrafo-resultado{
+    background-color: rgb(54, 224, 159);
+    padding: 10px 20px;
+}
+
+.bad {
+    background-color: rgb(231, 63, 63);
+    padding: 10px 20px;
+}
