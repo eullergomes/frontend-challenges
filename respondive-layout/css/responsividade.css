@@ -1,0 +1,40 @@
+@media (max-width: 420px){
+    .section-1{
+        display: flex; /**/
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+    .ebook img{
+        margin-right: 0px;
+    }
+    .action-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .action-title h2{
+        text-align: center;
+        font-size: 30px;
+    }
+    .button{
+        margin-top: 20px;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        margin-top: 40px;
+    }
+    
+    .section-3 h2{
+        text-align: center;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .section-3 p{
+        font-size: 12px;
+        margin-top: -20px;
+    }
+}
