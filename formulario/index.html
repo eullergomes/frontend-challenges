@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com validação</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Criar Uma Conta</h2>
+        </div>
+
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username" placeholder="Digite seu nome de usuário">Nome de usuário</label>
+                <input type="text" id="username">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email" placeholder="Digite email">Email</label>
+                <input type="text" id="email">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password" placeholder="Digite sua senha">Senha</label>
+                <input type="password" id="password">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password-confirmation" placeholder="Digite sua senha novamente">Confirmação de senha</label>
+                <input type="password" id="password-confirmation">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small>Mensagem de erro</small>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/e357ecee29.js" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
