@@ -7,4 +7,4 @@ Este repositório contém um site de projetos front-end realizados apenas com HT
 
 Para ver o resultado de cada projeto, basta acessar o link abaixo para abri-lo em seu navegador:
 
-[Link do projeto](https://github.com/eullergomes)
+[Link do projeto](https://eullergomes.github.io/frontend-challenges/)
