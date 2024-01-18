@@ -1,0 +1,63 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.search {
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+input {
+    width: 91%;
+    height: 50px;
+    padding-left:20px;
+    font-size: 22px;
+    border: 1px solid #ddd;
+    margin: 15px;
+    border-radius: 5px;
+
+}
+
+#list-products {
+    display: none;
+    width: 95%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 70px;
+}
+
+#list-products li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    border: 1px solid #ddd;
+    background: #f6f6f6;
+    padding: 12px;
+}
+
+#list-products li a:hover {
+    background: #eee;
+}
+
+.item-name {
+    margin-left: 15px;
+}
+
+h1, p {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+
