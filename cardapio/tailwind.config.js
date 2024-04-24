@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
+    fontFamily: {
+      'sans': ['Poppins', 'sans-serif']
+    },
     //extend - extender (adicionar) propriedades (classes) padrões
     extend: {
       backgroundImage: {
