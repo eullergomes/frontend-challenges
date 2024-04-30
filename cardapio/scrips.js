@@ -1,24 +1,24 @@
-const menu = document.getElementById('menu'); //menu de hamburgueres e bebidas
-const cartBtn = document.getElementById('cart-btn'); //botao de carrinho
-const cartModal = document.getElementById('cart-modal'); //carrinho de compras que aparece após clicar em 'cartBtn'
-const cartItemsContainer = document.getElementById('cart-items'); //lista de itens no carrinho
-const cartTotao = document.getElementById('cart-total'); //total do carrinho
-const checkoutBtn = document.getElementById('checkout-btn'); //botao de finalizar compra no carrinho
-const closeModalBtn = document.getElementById('close-modal-btn'); //botao de fechar carrinho
-const cartCounter = document.getElementById('cart-count'); //qtd. de itens no carrinho
-const addressInput = document.getElementById('address'); //input de endereço
-const addressWarm = document.getElementById('address-warm'); //mensagem de erro de endereço
-const checkOpen = document.getElementById('check-open');
+const menu = document.getElementById('menu'); //burgers and drinks menu
+const cartBtn = document.getElementById('cart-btn'); //cart button
+const cartModal = document.getElementById('cart-modal'); //shopping cart that appears after clicking on 'cart Btn'
+const cartItemsContainer = document.getElementById('cart-items'); //cart items list
+const cartTotao = document.getElementById('cart-total'); //cart total
+const checkoutBtn = document.getElementById('checkout-btn'); //finalize purchase
+const closeModalBtn = document.getElementById('close-modal-btn'); //cart close button
+const cartCounter = document.getElementById('cart-count'); //qtd. items in cart
+const addressInput = document.getElementById('address'); //address input
+const addressWarm = document.getElementById('address-warm'); //address warning
+const checkOpen = document.getElementById('check-open'); //open or closed restaurant
 
 let cart = [];
 
-//abrir o modal do carrinho
+//open cart modal
 cartBtn.addEventListener('click', () => {
   cartModal.style.display = 'flex';
   updateCartModal();
 });
 
-//fechar o modal do carrinho
+//close cart modal
 cartModal.addEventListener('click', (e) => {  
   if (e.target === cartModal || e.target === closeModalBtn) {
     cartModal.style.display = 'none';
@@ -26,18 +26,18 @@ cartModal.addEventListener('click', (e) => {
 });
 
 menu.addEventListener('click', e => {
-  let parentButton = e.target.closest('.add-to-cart-btn'); //botao de adicionar ao carrinho
+  let parentButton = e.target.closest('.add-to-cart-btn'); //add cart button
 
   if (parentButton) {
     const name = parentButton.getAttribute('data-name');
     const price = parseFloat(parentButton.getAttribute('data-price'));
 
-    //adicionar item ao carrinho
+    //add item to cart
     addToCart(name, price);
   }
 });
 
-//adicionar item ao carrinho
+//add item to cart
 function addToCart (name, price) {
   //pointer
   const existingItem = cart.find(item => item.name === name);
@@ -51,7 +51,7 @@ function addToCart (name, price) {
   updateCartModal();
 }
 
-//atualizar o carrinho
+//update cart
 function updateCartModal() {
   cartItemsContainer.innerHTML  = '';
   let total = 0;
@@ -77,7 +77,7 @@ function updateCartModal() {
   cartCounter.innerHTML = cart.length;
 }
 
-//remover item do carrinho
+//remove item from cart
 cartItemsContainer.addEventListener('click', e => {
   if (e.target.classList.contains('remove-btn')) {
     const name = e.target.getAttribute('data-name');
@@ -89,7 +89,7 @@ cartItemsContainer.addEventListener('click', e => {
 function removeItemCart(name) {
   const index = cart.findIndex(item => item.name === name);
 
-  if (index !== -1) { //encontrou na lista
+  if (index !== -1) { //finded
     if (cart[index].quantity > 1) {
       cart[index].quantity--;
     } else {
