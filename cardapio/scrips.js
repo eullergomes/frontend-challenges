@@ -110,12 +110,14 @@ addressInput.addEventListener('input', e => {
 
 checkoutBtn.addEventListener('click', e => {
   if (!isOpen) {
-    alert('Restaurante fechado');
+    
+    displayToast("Ops 😅, estamos fechados no momento. Volte mais tarde!");
+
     return;
   }
 
   if (cart.length === 0) {
-    alert('Carrinho vazio');
+    displayToast("Carrinho de compras vazio!");
     return;
   }
   
@@ -135,14 +137,12 @@ checkoutBtn.addEventListener('click', e => {
   window.open(`https://wa.me/${phone}?text=${message} *Endereço*: ${addressInput.value}`, "_blank");
 });
 
-
-
 function checkRestaurantIsOpen () {
   const date = new Date();
   const hour = date.getHours();
 
   //return hour >= 18 && hour <= 22;
-  return true;
+  return false;
 }
 
 const spanItem = document.getElementById('date-span');
@@ -153,4 +153,18 @@ if (isOpen) {
 } else {
   checkOpen.textContent = 'Fechado';
   spanItem.classList.add('bg-red-500');
+}
+
+function displayToast(message) {
+  Toastify({
+    text: message,
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "#ef4444", //red
+    },
+  }).showToast();
 }
