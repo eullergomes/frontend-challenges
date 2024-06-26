@@ -8,7 +8,7 @@ module.exports = {
     //extend - extender (adicionar) propriedades (classes) padrões
     extend: {
       backgroundImage: {
-        'home': "url('/assets/bg.png')",
+        'home': "url('./assets/bg.png')",
       }
     },
   },
