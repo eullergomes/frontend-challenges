@@ -7,7 +7,7 @@
     <meta name="description" content="Um site de exemplo do módulo de CSS">
     <meta name="keywords" content="agencia digital,fake agency">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsivo.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Fake Agency</title>
 </head>
 
@@ -22,6 +22,25 @@
             <a href="#">Serviços</a>
             <a id="botao" href="#">Fale Conosco</a>
         </div>
+
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+              </ul>
+            </nav> 
+        </div>
+          
+          <div class="menu-bg" id="menu-bg"></div>
     </nav> <!--navbar-->
 
     <header class="header">
@@ -63,7 +82,7 @@
             <div class="card">
                 <img src="./img/marketing.png">
                 <div class="card-text">
-                    <h3>Marketing digital</h3>
+                    <h3>Desenvolvimento de publicidades</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo quidem ipsam sunt sit inventore dolorum necessitatibus debitis, pariatur itaque a. Quibusdam cumque culpa molestias voluptatum ab corporis fuga quae dignissimos.</p>
                 </div>
                 <div class="text-ocult">
@@ -85,4 +104,11 @@
         <a target="_blank" href="https://api.whatsapp.com/send?phone=5598985334778&text=Ol%C3%A1%2C%20peguei%20seu%20contato%20no%20site"><img id="whats" src="img/pngwing.com.png"></a>
         
     </footer> <!--footer-->
+    <script>
+        function menuOnClick() {
+            document.getElementById("menu-bar").classList.toggle("change");
+            document.getElementById("nav").classList.toggle("change");
+            document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+    </script>
 </html>
